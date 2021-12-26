@@ -15,7 +15,7 @@ terraform {
     organization = "AJ-Terraform-labs"
 
     workspaces {
-      name = "demo-github-action"
+      name = "tf-abhi"
     }
   }
 }
@@ -35,7 +35,7 @@ resource "aws_instance" "web" {
 
   user_data = <<-EOF
               #!/bin/bash
-              echo "Hello, Abhi " > index.html
+              echo "Hello, Abhi " >> index.html
               nohup busybox httpd -f -p 8080 &
               EOF
 }
