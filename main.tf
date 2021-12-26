@@ -12,14 +12,13 @@ terraform {
   required_version = ">= 1.1.0"
 
   cloud {
-    organization = "REPLACE_ME"
+    organization = "AJ-Terraform-labs"
 
     workspaces {
-      name = "gh-actions-demo"
+      name = "demo-github-action"
     }
   }
 }
-
 
 provider "aws" {
   region = "us-west-2"
@@ -36,7 +35,7 @@ resource "aws_instance" "web" {
 
   user_data = <<-EOF
               #!/bin/bash
-              echo "Hello, World" > index.html
+              echo "Hello, Abhi " > index.html
               nohup busybox httpd -f -p 8080 &
               EOF
 }
