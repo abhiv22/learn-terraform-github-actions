@@ -12,10 +12,10 @@ terraform {
   required_version = ">= 1.1.0"
 
   cloud {
-    organization = "AJ-Terraform-labs"
+    organization = "AJ-workspace"
 
     workspaces {
-      name = "demo-github-action"
+      name = "tf-abhi"
     }
   }
 }
